@@ -27,7 +27,7 @@ _________________________
 - [X] Buttons for each player choice
 - [X] New Game button - refreshes page to clear current scores
 - [X] Buttons work
-- [] Test GAME DECIDER if/else statement - needs debugging
+- [X] Test GAME DECIDER if/else statement - needs debugging
 - [] Display Player & Opponent Score
 - [] Display Round Number
 _________________________
