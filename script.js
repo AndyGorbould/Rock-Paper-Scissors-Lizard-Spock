@@ -9,11 +9,14 @@ const rpsls = [
 // initialize buttons
 const resetSelection = document.getElementById("resetSelection");
 const nextRound = document.getElementById("nextRound");
+const playerSelector = document.getElementById("playerSelector");
 
 // Score init
 let playerScore = 0;
 let opponentScore = 0;
 let roundNumber = 1;
+
+
 
 
 // PLAY button - funcs to run:
@@ -60,18 +63,43 @@ document.getElementById("testButton").onclick = function () {
 
 
 // GAME DECIDER
-if (playerChoice == opponentChoice) {
-    roundTie();
-} else if (playerChoice = "Rock" && opponentChoice == "Scissors" || opponentChoice == "Lizard") {
-    roundWin;
-} else if (playerChoice = "Paper" && opponentChoice == "Rock" || opponentChoice == "Spock") {
-    roundWin;
-} else if (playerChoice = "Scissors" && opponentChoice == "Paper" || opponentChoice == "Lizard") {
-    roundWin;
-} else if (playerChoice = "Lizard" && opponentChoice == "Paper" || opponentChoice == "Spock") {
-    roundWin;
-} else if (playerChoice = "Spock" && opponentChoice == "Scissors" || opponentChoice == "Rock") {
-    roundWin;
-} else {
-    roundLose();
+function gameDecider() {
+    if (playerChoice == opponentChoice) {
+        roundTie();
+    } else if (playerChoice = "Rock" && opponentChoice == "Scissors" || opponentChoice == "Lizard") {
+        roundWin();
+    } else if (playerChoice = "Paper" && opponentChoice == "Rock" || opponentChoice == "Spock") {
+        roundWin();
+    } else if (playerChoice = "Scissors" && opponentChoice == "Paper" || opponentChoice == "Lizard") {
+        roundWin();
+    } else if (playerChoice = "Lizard" && opponentChoice == "Paper" || opponentChoice == "Spock") {
+        roundWin();
+    } else if (playerChoice = "Spock" && opponentChoice == "Scissors" || opponentChoice == "Rock") {
+        roundWin();
+    } else {
+        roundLose();
+    }
 }
+
+
+
+// Player choices (run on load & on next round)
+function playerSelectorLoad() {
+    for (var i = 0; i < rpsls.length; i++) {
+        console.log(rpsls[i]);
+        playerSelector.innerHTML += `<button id="${rpsls[i]}">${rpsls[i]}</button>`;
+    }
+};
+
+
+document.onload = playerSelectorLoad();
+
+
+
+
+
+// New Game (refresh)
+document.getElementById("newGame").onclick =
+function newGame(){
+    window.location.reload();
+} 

@@ -15,7 +15,6 @@ _________________________
 - [] Button to play next round after results
     this must be disabled until a round is complete
 - [] See if this could be made into an app using Framework7 or alternative (final goal)
-- [] Function A for player win Function B for player lose Function C for tie
 - [X] Win func adds playerScore++, Lose opponentScore++, tie no change
 - [] Replace RPSLS with Street Fighter II characters (use an API???) - display win/lose images based on character
 _________________________
@@ -24,7 +23,10 @@ _________________________
 - [X] Making all elements, IDs, classes clear & readable
 - [X] Button to randomize the "opponent" choice
 - [X] Using an array for the RPSLS
-- [] Buttons for each player choice
+- [X] Functions roundWin roundLose roundTie
+- [X] Buttons for each player choice
+- [X] New Game button - refreshes page to clear current scores
+- [] Buttons work?
 - [] Test GAME DECIDER if/else statement
 _________________________
 ### List of elements JS:
@@ -37,8 +39,8 @@ _________________________
 - 
 - opponentChoice
 - playerChoice
-- 
-- 
+- playerSelector
+- playerSelectorLoad
 - 
 - 
 _________________________
