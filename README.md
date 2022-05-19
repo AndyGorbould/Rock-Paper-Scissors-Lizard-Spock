@@ -9,28 +9,54 @@
 _________________________
 ### How can I make this?
 - [X] Use this MD to plan the game from the start!
-- [X] Using an array for the RPSLS?
 - [] Select RPSLS from a row of appropriate images
-- [X] Button to randomize the "opponent" choice
 - [] Using if/else arguments for the winner?
 - [] An element for displaying player/opponent scores after each round
 - [] Button to play next round after results
     this must be disabled until a round is complete
 - [] See if this could be made into an app using Framework7 or alternative (final goal)
 - [] Function A for player win Function B for player lose Function C for tie
-- [] Win func adds playerScore++, Lose opponentScore++, tie no change
+- [X] Win func adds playerScore++, Lose opponentScore++, tie no change
+- [] Replace RPSLS with Street Fighter II characters (use an API???) - display win/lose images based on character
 _________________________
 ### Steps taken:
 - [X] Using & modifying MD all the way through the project to keep general oversight
 - [X] Making all elements, IDs, classes clear & readable
+- [X] Button to randomize the "opponent" choice
+- [X] Using an array for the RPSLS
+- [] Buttons for each player choice
+- [] Test GAME DECIDER if/else statement
 _________________________
 ### List of elements JS:
 - rpsls (array of the choices)
+- resetSelection (button)
+- nextRound (button)
+- playerScore (display)
+- opponentScore (display)
+- roundNumber (display)
+- 
+- opponentChoice
+- playerChoice
+- 
+- 
+- 
+- 
 _________________________
 ### List of HTML IDs:
+- testButton
 - playerSelector (all choices available)
 - play (enabled after playSelector)
 - resetSelection
 - nextRound
 - opponentChoice (random choice displayed after "play" has been made)
 - playerChoice (the selected choice displayed)
+_________________________
+_________________________
+
+### How to play?
+
+- Rock: Scissors & Lizard
+- Paper: Rock & Spock
+- Scissors: Paper & Lizard
+- Lizard: Paper & Spock
+- Spock: Scissors & Rock
