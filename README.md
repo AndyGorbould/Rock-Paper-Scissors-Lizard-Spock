@@ -26,8 +26,10 @@ _________________________
 - [X] Functions roundWin roundLose roundTie
 - [X] Buttons for each player choice
 - [X] New Game button - refreshes page to clear current scores
-- [] Buttons work?
-- [] Test GAME DECIDER if/else statement
+- [X] Buttons work
+- [] Test GAME DECIDER if/else statement - needs debugging
+- [] Display Player & Opponent Score
+- [] Display Round Number
 _________________________
 ### List of elements JS:
 - rpsls (array of the choices)
