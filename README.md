@@ -28,8 +28,9 @@ _________________________
 - [X] New Game button - refreshes page to clear current scores
 - [X] Buttons work
 - [X] Test GAME DECIDER if/else statement - needs debugging
-- [] Display Player & Opponent Score
-- [] Display Round Number
+- [X] Display Player & Opponent Score
+- [X] Display Round Number
+- [X] Removed unneccessary parts (opponentChoiceDisp, reset & next round buttons)
 _________________________
 ### List of elements JS:
 - rpsls (array of the choices)

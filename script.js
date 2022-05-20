@@ -2,15 +2,13 @@
 const rpsls = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 
 // initialize buttons
-const resetSelection = document.getElementById("resetSelection");
-const nextRound = document.getElementById("nextRound");
 const playerSelector = document.getElementById("playerSelector");
 const roundDisp = document.getElementById("roundDisp");
 const playerScoreDisp = document.getElementById("playerScoreDisp");
 const opponentScoreDisp = document.getElementById("opponentScoreDisp");
 const playerChoiceDisp = document.getElementById("playerChoiceDisp");
 const opponentChoiceDisp = document.getElementById("opponentChoiceDisp");
-
+const previousDisp = document.getElementById("previousDisp");
 
 // Score init
 let playerScore = 0;
@@ -58,7 +56,6 @@ document.getElementById("play").onclick = function () {
     let opponentChoice = rpsls[Math.floor(Math.random() * rpsls.length)];
     console.log(`Player: ${playerChoice} Machine: ${opponentChoice}`);
 
-
     if (playerChoice == opponentChoice) {
         roundTie();
     } else if (playerChoice == "Rock" && opponentChoice == "Scissors") {
@@ -89,18 +86,18 @@ document.getElementById("play").onclick = function () {
 // Round score handler
 function roundWin() {
     playerScore = playerScore + 1;
-    alert("You Win!")
+    // alert("You Win!")
     roundNumber = roundNumber + 1;
     console.log(`Round ${roundNumber - 1} Player Score: ${playerScore} - Opponent Score: ${opponentScore}`);
 };
 function roundLose() {
     opponentScore = opponentScore + 1;
-    alert("You Lose :(")
+    // alert("You Lose :(")
     roundNumber = roundNumber + 1;
     console.log(`Round ${roundNumber - 1} Player Score: ${playerScore} - Opponent Score: ${opponentScore}`);
 };
 function roundTie() {
-    alert("YOU BOTH LOSE!")
+    // alert("YOU BOTH LOSE!")
     roundNumber = roundNumber + 1;
     console.log(`Round ${roundNumber - 1} Player Score: ${playerScore} - Opponent Score: ${opponentScore}`);
 };
@@ -113,8 +110,10 @@ function displayLoop() {
         playerScoreDisp.innerHTML = `Player Score: ${playerScore}`;
         opponentScoreDisp.innerHTML = `Opponent Score: ${opponentScore}`;
 
-        playerChoiceDisp.innerHTML = `Player Choice: ${playerChoice}`;
-        opponentChoiceDisp.innerHTML = `Opponent Choice: ${opponentChoice}`;
+        playerChoiceDisp.innerHTML = `Your Choice: ${playerChoice}`;
+
+        // this isn't working correctly (needs to diplays choices & results from round, & change in a list)
+        // previousDisp.innerHTML = `Round ${roundNumber - 1} Player: ${playerChoice} - Opponent Score: ${opponentChoice}`;
 
     }, 500);
 
